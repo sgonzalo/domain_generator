@@ -9,13 +9,16 @@ import "../style/index.scss";
 window.onload = function() {
   //   console.log('generatedomain')///////
 
-  let firstArray = ["The ", "Your ", "My "];
-  let secondArray = [" smallest", " biggest", " dirtiest"];
-  let thirdArray = [" website.com", " site.com", " domain.com"];
-
-  firstArray.forEach(first => {
-    secondArray.forEach(second => {
-      thirdArray.forEach(third => {});
-    });
-  });
+  console.log("Hello Rigo from the console!");
+  console.log("Hello Rigo from the console!");
+  var pronoun = ["the", "your", "my"];
+  var adj = ["smallest", "biggest", "dirtiest"];
+  var noun = ["website", "site", "domain"];
+  let emptyArray = [];
+  for (let a in pronoun)
+    for (let b in adj)
+      for (let c in noun)
+        emptyArray.push(pronoun[a] + adj[b] + noun[c] + ".com <br>");
+  console.log(emptyArray);
+  document.querySelector(".domains").innerHTML = emptyArray;
 };
